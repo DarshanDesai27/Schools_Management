@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Group</title>
+    <link rel="stylesheet" href="Styles.css"> <!-- Link to the separate CSS file -->
+    <script>
+        // JavaScript function to handle double-click event
+        function updateAccountGroup(event) {
+            const accountGroupInput = document.getElementById('AccountGroup');
+            const groupValue = event.target.innerText;
+            accountGroupInput.value = groupValue; // Set the value of the input to the double-clicked group
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        <div>
+            <h1>Account Group Information</h1>
+
+            <label for="AccountGroup">Account Group</label>
+            <input type="text" id="AccountGroup" name="AccountGroup" value="text">
+
+            <label for="UnderGroup">Under Group</label>
+            <select id="UnderGroup" name="Groups">
+                <option value="Select Under Group">Select Under Group</option>
+                <option value="N.A.">N.A.</option>
+                <option value="Bank Account">Bank Account</option>
+                <option value="Bank O/D Account">Bank O/D Account</option>
+                <option value="Broker">Broker</option>
+                <option value="Capital Account">Capital Account</option>
+                <option value="Cash-in-hand">Cash-in-hand</option>
+                <option value="Collector">Collector</option>
+                <option value="Current Assets">Current Assets</option>
+                <option value="Current Liabilities">Current Liabilities</option>
+                <option value="Customers">Customers</option>
+                <option value="Duties & Taxes">Duties & Taxes</option>
+                <option value="Expenses [Direct/Mfg.]">Expenses [Direct/Mfg.]</option>
+                <option value="Expenses [Indirect/Admin]">Expenses [Indirect/Admin]</option>
+                <option value="Fixed Assets">Fixed Assets</option>
+                <option value="Income [Direct/Opr.]">Income [Direct/Opr.]</option>
+                <option value="Income [Indirect]">Income [Indirect]</option>
+                <option value="Investments">Investments</option>
+                <option value="Loans & Advances [Asset]">Loans & Advances [Asset]</option>
+                <option value="Loans [Liability]">Loans [Liability]</option>
+                <option value="Pre-Operative Expenses">Pre-Operative Expenses</option>
+                <option value="Profit & Loss">Profit & Loss</option>
+                <option value="Provisions/Expenses Payable">Provisions/Expenses Payable</option>
+                <option value="Purchase">Purchase</option>
+                <option value="Reserves & Surplus">Reserves & Surplus</option>
+                <option value="Revenue Account">Revenue Account</option>
+                <option value="Sale">Sale</option>
+                <option value="Secured Loans">Secured Loans</option>
+                <option value="Securities & Deposits [Asset]">Securities & Deposits [Asset]</option>
+                <option value="Self Stock">Self Stock</option>
+                <option value="Stock-in-hand">Stock-in-hand</option>
+                <option value="Student">Student</option>
+                <option value="Sundry Creditors">Sundry Creditors</option>
+                <option value="Sundry Debtors">Sundry Debtors</option>
+                <option value="Suppliers">Suppliers</option>
+                <option value="Suspense Account">Suspense Account</option>
+                <option value="Teachers">Teachers</option>
+                <option value="Unsecured Loans">Unsecured Loans</option>
+            </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Group</th>
+                        <th>Primary</th>
+                        <th>Under Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Bank Account</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Bank O/D Account</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Loans [Liability]</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Broker</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Capital Account</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Cash-in-hand</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Collector</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Sundry Creditors</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Current Liabilities</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Customers</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Sundry Debtors</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Duties & Taxes</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Liabilities</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Expenses [Direct/Mfg.]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Expenses [Indirect/Admin.]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Fixed Assets</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Income [Direct/Mfg.]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Income [Indirect]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Investments</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Loans & Advances [Asset]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Loans [Liability]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Pre-Operative Expenses</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Profit & Loss</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Provisions/Expenses Payable</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Liabilities</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Purchase</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Reserves & Surplus</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Capital Account</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Revenue Accounts</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Sale</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Revenue Accounts</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Secured Loans</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Loans [Liability]</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Securities & Deposits [Asset]</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Self Stock</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Stock-in-hand</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Student</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Sundry Debtors</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Sundry Creditors</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Liabilities</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Sundry Debtors</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Current Assets</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Suppliers</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Sundry Creditors</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Suspense Account</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td></td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Teachers</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Sundry Creditors</td>
+                    </tr>
+                    <tr ondblclick="updateAccountGroup(event)">
+                        <td>Unsecured Loans</td>
+                        <td><input type="checkbox" name="Primary" value="yes"></td>
+                        <td>Loans [Liability]</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <input type="button" value="Update">
+            </p>
+        </div>
+    </form>
+
+</body>
+</html>
